@@ -1,0 +1,18 @@
+.box{
+  color: blue;
+  font-size: 32px;
+}
+
+.box1{
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+
+.box2{
+  /* rpx 是 px 的一半大小(在iphone6屏幕下)！！！ */
+  width: 200rpx;
+  height: 200rpx;
+  background:blue;
+  margin-top: 10px;
+}
