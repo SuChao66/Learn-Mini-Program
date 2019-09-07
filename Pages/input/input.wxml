@@ -1,0 +1,26 @@
+<!--Pages/input/input.wxml-->
+<!-- 1.基本使用 -->
+<input/>
+
+<!-- 2.常见属性 value:初始值 -->
+<input value="哈哈哈哈"/>
+
+<!-- 3.type:决定键盘的类型(英文字母+其他字符/身份证) -->
+<input type="number"/> <!-- 数字键盘 -->
+<input type="idcard"/> <!-- 身份证 -->
+<input type="text"/>    <!-- 文本类型：默认 -->
+
+<!-- 4.password:暗文 -->
+<input password/>
+
+<!-- 5.placeholder -->
+<input placeholder="请输入内容"/>
+
+<!-- 6.focus -->
+<input focus/>
+
+<!-- 7.input绑定事件 -->
+<input bindinput="handleinput"
+       bindfocus="handlefocus"
+       bindblur="handleblur"
+/>

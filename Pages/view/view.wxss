@@ -1,0 +1,26 @@
+/* Pages/view/view.wxss */
+.content{
+  background: red;
+}
+
+.box{
+  width: 100px;
+  height: 100px;
+  background: purple;
+}
+
+.box-view{
+  background: yellow;
+  font-size: 30px
+}
+
+.box1{
+  width: 200px;
+  height: 200px;
+  background: blue;
+  margin-top: 20px;
+}
+
+.box1-view{
+  background: green;
+}

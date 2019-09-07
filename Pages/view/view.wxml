@@ -1,0 +1,27 @@
+<!--Pages/view/view.wxml-->
+
+<!-- 1.view的基本使用 -->
+<!-- 
+    1.块级标签：独占一行
+    2.相当于HTML里的div
+-->
+<view class="content">哈哈哈</view>
+<view>呵呵呵</view>
+
+
+
+<!-- 2.hover-class:当用户按下组件时：显示的样式 -->
+<view class="box"
+      hover-class="box-view"
+      hover-stay-time="{{0}}"
+>box1
+</view>
+
+<!-- 3.hover-stop-propagation:阻止冒泡 -->
+<view class="box1" hover-class="box1-view">
+  <view class="box"
+      hover-class="box-view"
+      hover-stay-time="{{0}}"
+      hover-stop-propagation="true">box1
+  </view>
+</view>

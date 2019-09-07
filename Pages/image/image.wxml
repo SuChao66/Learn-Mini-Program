@@ -1,0 +1,28 @@
+<!--Pages/image/image.wxml-->
+<!-- 1.基本使用 -->
+<!-- 
+    重点：
+      1.image组件可以写成单标签，也可以写成双标签
+      2.image组件默认有自己的大小：320x240
+      3.image是一个行内块级元素（inline-block）
+ -->
+<image src="../../assets/a0r.png"></image>   <!-- 相对路径 -->
+<image src="/assets/a0r.png"></image>        <!-- 绝对路径 -->
+
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<!-- 2.补充：选择相册里面的照片 -->
+<button size="mini" bindtap="handlleChooseAlbum">选择照片</button>
+<image src="{{imagePath}}"></image>
+
+<!-- 3.bindload & lazy-load -->
+<image wx:key="{{1}}"
+    src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+    bindload="handleImageLoad"
+    lazy-load
+    />
+
+<!-- 4.show-menu-by-longpress: 长按识别小程序码-->
+<image show-menu-by-longpress
+       src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+/>
