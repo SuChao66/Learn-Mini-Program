@@ -1,3 +1,49 @@
-<!--Pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">按钮</button>
+<!-- 1.事件处理的回顾 -->
+<button size="mini" bindtap="handleBtnClick">按钮1</button>
+<button size="mini" bind:tap="handleBtnClick">按钮2</button>
+<button size="mini" catch:tap="handleBtnClick">按钮3</button>
+
+<!-- 2.常见的一些事件 -->
+<!-- 
+  注意：
+    tap和longpress事件智慧触发一个
+    torchcancle只会在某些特定情况下才会触发（比如来电等）
+ -->
+<view class="box"
+      bind:touchstart="handleToychStart"
+      bind:touchmove="handleTouchMove"
+      bind:touchend="handleTouchEnd"
+      bind:tap="handleTap"
+      bind:longpress="handleLongPress"></view>
+
+<!-- 3.事件对象的分析 -->
+<button size="mini" bindtap="handleEventClick">事件对象</button>
+
+<!-- 
+  注意：
+    当事件发生冒泡事件时，target和changedTarget里面的内容不一样
+    target:产生触发事件    changedTarget:触发事件
+ -->
+<view class="outer" id="outer" bindtap="handleOuter">外层的view
+  <view class="inner" id="inner" bindtap="handleInner">内层view</view>
+</view>
+
+<!-- 4.时间的传递参数:"data-" -->
+<view class="container">
+  <block wx:for="{{title}}" wx:key="{{index}}">
+    <view class="item" bindtap="handleItemClick"
+    data-index="{{index}}"
+    data-item="{{item}}">{{item}}</view>
+  </block>
+</view>
+
+<!-- 5.事件冒泡和事件捕获 -->
+<!-- 
+  bind:一层层传递
+  catch：阻止事件进一步传递
+ -->
+<view class="view1" capture-bind:tap="handleCaptureView1" bindtap="handleBindView1">
+  <view class="view2" capture-bind:tap="handleCaptureView2" bindtap="handleBindView2">
+    <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBindView3"></view>
+  </view>
+</view>
