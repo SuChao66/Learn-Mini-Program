@@ -1,0 +1,5 @@
+<view class="title">{{title}}</view>
+<view class="content">我是自定义组件的内容</view>
+
+<!-- 自定义组件可以嵌套使用 -->
+<cpn1/>
