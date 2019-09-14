@@ -1,3 +1,18 @@
-<!--Pages/home/home.wxml-->
-<text class="title">hello world</text>
 <button size="mini">按钮</button>
+<text class="title">Hello World\n</text>
+
+<!-- 弹窗效果 -->
+<!-- 1.ShowToast -->
+<button size="mini" bindtap="handleShowToast">ShowToast</button>
+
+<!-- 2.ShowModal -->
+<button size="mini" bindtap="handleShowModal">ShowModal</button>
+
+<!-- 3.ShowLoading -->
+<button size="mini" bindtap="handleShowLoading">ShowLoading</button>
+
+<!-- 4.ShowActionSheet -->
+<button size="mini" bindtap="handleShowActionSheeet">ShowActionSheet</button>
+
+<!-- 5.小程序分享细节 -->
+<button size="mini" open-type="share">分享</button>
