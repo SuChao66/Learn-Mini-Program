@@ -1,6 +1,20 @@
 {
   "pages": [
     "Pages/home/home",
-    "Pages/about/about"
-  ]
+    "Pages/about/about",
+    "Pages/detail/detail",
+    "Pages/commemt/comment"
+  ],
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "Pages/home/home",
+      "text": "首页"
+      },
+      {
+        "pagePath": "Pages/about/about",
+        "text": "关于"
+      }
+    ]
+  }
 }
